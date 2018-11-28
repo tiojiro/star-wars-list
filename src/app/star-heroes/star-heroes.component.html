@@ -1,0 +1,11 @@
+<h2>Filtro:  <input #searchBox id="search-box" (input)="search(searchBox.value)" /></h2>
+<ul class="starHeroes"  *ngIf="starHeroes">
+  <li *ngFor="let starHero of starHeroes">
+      <a routerLink="/star-hero-detail" (click)="onSelect(starHero)">
+        {{starHero.name}}
+      </a>
+  </li>
+</ul>
+<ul class="starHeroes"  *ngIf="!starHeroes">
+    <h2>Carregando...</h2>
+</ul>

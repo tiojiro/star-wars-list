@@ -1,0 +1,22 @@
+<div *ngIf="starHero">
+
+  <h2>Detalhes do personagem {{starHero.name | uppercase}}:</h2>
+  <div>
+    <label>Altura: {{starHero.height}}cm</label>
+  </div>
+  <div>
+    <label>Cor do cabelo: {{starHero.hair_color}}</label>
+  </div>
+  <div>
+    <label>Olhos: {{starHero.eye_color}}</label>
+  </div>
+  <div>
+    <label>Gênero: {{starHero.gender}}</label>
+  </div>
+  <div><br></div>
+  <div>
+    <label style="color: red">Planeta Natal:</label><label *ngIf="homeworld"> {{homeworld.name}}</label> <label *ngIf="!homeworld"> Carregando...</label>
+  </div>
+
+  <button (click)="goBack()">Voltar</button>
+</div>
