@@ -5,8 +5,9 @@ import { StarHeroDetailComponent } from './star-hero-detail/star-hero-detail.com
 
 const routes: Routes = [
   { path: 'star-heroes', component: StarHeroesComponent },
-  { path: 'star-hero-detail', component: StarHeroDetailComponent},
-  { path: '**', component: StarHeroesComponent }
+  { path: 'star-hero-detail', component: StarHeroDetailComponent },
+  { path: '', redirectTo: 'star-heroes', pathMatch: 'full'}, 
+  { path: '**', redirectTo: 'star-heroes', pathMatch: 'full'}
 ];
 
 @NgModule({

@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { StarHero } from './star-hero';
+import { Observable} from 'rxjs';
+import { HttpClient} from '@angular/common/http';
+import { StarHero } from './types/star-hero';
 import { map } from 'rxjs/operators';
-import { StarHeroHomeworld } from './star-hero-homeworld';
+import { StarHeroHomeworld } from './types/star-hero-homeworld';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StarWarsService {
 
-  private starWarsHeroesUrl = 'https://swapi.co/api/people/'; 
+  readonly starWarsHeroesUrl = 'https://swapi.co/api/people/'; 
   private _starHero: StarHero;
 
   public get starHero(): StarHero {

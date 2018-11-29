@@ -1,10 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { StarWarsService } from '../star-wars.service';
-import { StarHero } from '../star-hero';
-import { Observable, Subject } from 'rxjs';
-import {
-  debounceTime, distinctUntilChanged, switchMap
-} from 'rxjs/operators';
+import { StarHero } from '../types/star-hero';
 
 @Component({
   selector: 'app-star-heroes',
@@ -12,7 +8,7 @@ import {
   styleUrls: ['./star-heroes.component.css']
 })
 export class StarHeroesComponent implements OnInit {
-  starHeroes: StarHero[];
+  starHeroes: StarHero[] = [];
   searchStarHeroes: StarHero[];
 
   constructor(private starWarsService: StarWarsService) { }
@@ -35,7 +31,7 @@ export class StarHeroesComponent implements OnInit {
 
   search(term: string): void {
     this.starHeroes = this.searchStarHeroes.filter((itemStarHero) => {
-      return itemStarHero.name.toLowerCase().indexOf(term.toLowerCase()) > -1;
+      return itemStarHero.name.toLowerCase().indexOf(term.toLowerCase()) >= 0;
     })
   }
 }
