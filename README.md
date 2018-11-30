@@ -1,6 +1,10 @@
 # StarWarsList
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6.
+I've consulted these websites below to learn and develop this application on Angular language:
+https://angular.io/tutorial
+https://swapi.co/
+https://codepen.io/ncerminara/pen/KzurJ
 
 ## Development server
 
